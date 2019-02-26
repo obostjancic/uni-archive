@@ -1,0 +1,66 @@
+
+.compactModalHeader {
+    padding: 0.5% !important;
+}
+
+.modalRightColumn {
+    padding-left: 0 !important;
+}
+
+.activityScroll {
+    max-height: 100% !important;
+    overflow-y: scroll !important;
+}
+
+.addIconLabel {
+    margin: 0 !important;
+}
+
+.marginBottom {
+    margin-bottom: 0.5% !important;
+}
+
+.horizontalGroupSegment {
+    max-width: 50% !important;
+}
+
+.checkboxDateLabel > label {
+    color: white !important;
+}
+
+.h4Icon {
+    font-size: 100% !important;
+}
+
+.labelRow {
+    padding: 1% !important;
+}
+
+.popupLabel {
+    width: 100%;
+    min-height: 100%;
+}
+
+.zeroBottomMargin {
+    margin-bottom: 0 !important;
+}
+
+.headerLabel {
+    margin-bottom: 0.5% !important;
+}
+
+.disabled {
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+}
+
+/* checklist */
+.inputPadding input{
+    padding-top: 0 !important;
+    padding-left: 1% !important;
+    padding-bottom: 0 !important;
+}
+
+.formVAlign {
+    margin-bottom: 0 !important;
+}

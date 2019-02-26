@@ -1,0 +1,102 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../images/hotel-jumbo.jpg");
+    background-size: cover;
+}
+
+.soba-button {
+    width: 50%;
+    height: auto;
+    background-color: rgba(0, 158, 96, 0.8);
+    display:block;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 0;
+    border: 5px solid rgba(255,255,255, 0.8);
+}
+
+.razmak {
+    margin: 10px 0;
+    height : 1px;
+    width : 100%;
+    background-color: transparent;
+}
+
+
+#slajder {
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 50px;
+    left: 0;
+
+    background-color: rgba(0,0,0,0.85);
+    color: white;
+}
+
+.slajder-sadrzaj {
+    line-height: 0px;
+}
+
+.slajder-button {
+    width: 30%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 0;
+    border: 3px solid rgba(255,255,255, 0.8);
+}
+
+.slajder-naslov {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#check-in-gost, #check-in-duzBor {
+    background-color: rgba(0,0,0,0.5);
+    border: 3px solid white;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    color: white;
+}
+
+#sve-sobe {
+    padding-top: 40px;
+}
+
+body.modal-open .container-fluid{
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+#racun-text {
+    margin: 20px;
+}
+.modal-content {
+    width: 50%;
+
+}
+
+.margina-lijeva {
+    width: 153px;
+}
+
+hr {
+    border: 2px solid;
+}
+
+.modal-backdrop {
+    background-color: black;
+}

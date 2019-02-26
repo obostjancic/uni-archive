@@ -1,0 +1,86 @@
+
+#login-dugme:hover {
+    background-color: rgba(0, 158, 96, 0.9);
+}
+
+nav ul li a {
+    opacity: 0.9;
+    color: white !important;
+}
+
+nav ul li a:hover {
+    opacity: 0.75;
+    background-color: rgba(0, 158, 96, 0.9) !important;
+}
+
+.naslov {
+
+    opacity: 0.9;
+    margin: 200px auto;
+    font-size: 100px;
+}
+
+#image-jumbo {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("../images/hotel-jumbo.jpg");
+    background-size: cover;
+}
+
+.clanak {
+    padding: 20px;
+    color: white;
+    line-height: 25px;
+}
+
+.slika-wrapper {
+    overflow:auto;
+    padding: 0 !important;
+    background-image: url('../images/slika 4.jpg');
+    background-size: cover;
+}
+
+#slika-wrapper-1 {
+    background-image: url('../images/slika-1.jpg')
+}
+#slika-wrapper-2 {
+    background-image: url('../images/slika-2.jpg')
+}
+#slika-wrapper-3 {
+    background-image: url('../images/slika-3.jpg')
+}
+#slika-wrapper-4 {
+    background-image: url('../images/slika-4.jpg')
+}
+
+.lijevi {
+    margin: 0 !important;
+    display: inline-block;
+    height: 100%;
+
+}
+.desni {
+     margin: 0 !important;
+     display: inline-block;
+     height: 100%;
+ }
+
+.tamni {
+    background-color: rgba(0,0,0, 0.6);
+}
+
+
+#unmLogin {
+    background-color: rgba(0,0,0,0.5);
+    border: 3px solid white;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    color: white;
+}
+#passLogin {
+    background-color: rgba(0,0,0,0.5);
+    border: 3px solid white;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    color: white;
+}

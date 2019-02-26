@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1 class="text-center">Manage players</h1>
+<div class="container">
+    <button type="button" class="btn" data-toggle="modal" data-target="#createFormModal">Create</button>
+
+    <div id="createFormModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Create new player</h4>
+                </div>
+                <form id="playerCreateForm" action="/playerCreate" method="post">
+                    <div class="modal-body">
+                        <label for="unm">Username:</label>
+                        <input type="text" class="form-control" id="unm" name="unm">
+                        <label for="frstnm">First name:</label>
+                        <input type="text" class="form-control" id="frstnm" name="frstnm">
+                        <label for="lstnm">Last name:</label>
+                        <input type="text" class="form-control" id="lstnm" name="lstnm">
+                        <label for="pass">Password:</label>
+                        <input type="password" class="form-control" id="pass" name="pass">
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" value="Create" class="btn btn-default" data-dismiss="modal" onclick="addPlayer()"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="editPlayerModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit player</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="unm">Username:</label>
+                    <input type="text" class="form-control" id="unmEdit" value="acd" name="unmEdit">
+                    <label for="frstnm">First name:</label>
+                    <input type="text" class="form-control" id="frstnmEdit" name="frstnmEdit">
+                    <label for="lstnm">Last name:</label>
+                    <input type="text" class="form-control" id="lstnmEdit" name="lstnmEdit">
+                </div>
+                <div class="modal-footer" id="editModalFooter">
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table" id="playerTable">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Latitude</th>
+            <th>Longditude</th>
+            <th>Is online</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (var i = 0; i < result.length; i++){ %>
+        <tr id=<%= "tRow" + i %>>
+            <td><%= result[i].username %></td>
+            <td><%= result[i].firstname %></td>
+            <td><%= result[i].lastname %></td>
+            <td><%= result[i].lat %></td>
+            <td><%= result[i].lon %></td>
+            <td><%= result[i].isonline %></td>
+            <td><button class="btn" type="button" onclick="openEditModal(<%= i %>)">Edit</button></td>
+            <td><button class="btn" type="button" onclick="deleteRow(<%= i %>)">Delete</button></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript" src="/javascripts/player.js"></script>
+</body>
+</html>

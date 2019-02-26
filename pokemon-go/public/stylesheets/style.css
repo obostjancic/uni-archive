@@ -1,0 +1,110 @@
+body {
+  font: 400 15px/1.8 Lato, sans-serif;
+  color: #777;
+
+}
+.btn {
+  margin: 10px 20px;
+  padding: 0px 20px;
+  height: 35px;
+  background-color: rgba(0,0,0,0.45);
+  color: #f1f1f1;
+  border-radius: 2%;
+  transition: .2s;
+}
+
+.naslov-admin {
+  margin-bottom: 30px;
+}
+
+.btn-link {
+  margin: 0px 20px;
+  padding: 10px 20px;
+  height: 35px;
+  background-color: rgba(0,0,0,0.75);
+  color: #f1f1f1;
+}
+.index-btn {
+  margin: 10px 0;
+}
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+  border-radius: 0;
+  border: none;
+
+  background: #6db3f2; /* Old browsers */
+  background: -moz-linear-gradient(top, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); /* IE6-9 */
+}
+.btn:hover, .btn:focus {
+  border: 1px solid #333;
+  background-color: rgba(255,255,255, 0.45);
+  color: #000;
+}
+
+#connectionList {
+  opacity: 0;
+}
+
+.inline {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+
+
+#logo {
+  height: 30px;
+}
+
+#map {
+  height: 500px;
+}
+.bigPicPokemon {
+  height: 200px;
+}
+
+#logout-link {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#catchPokemonModalBody {
+  padding: 10px;
+}
+
+.hpBox {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  background-color: limegreen;
+  width: 10px;
+  height: 10px;
+  border-radius: 10%;
+}
+
+.spacer {
+    width: 100%;
+    height: 1px;
+    margin: -7px 0;
+    padding: 0;
+}
+
+#leftPictureTurn {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: "FlipH";
+}
+
+.damageIndicator {
+    opacity: 0.01;
+    color: red !important;
+}

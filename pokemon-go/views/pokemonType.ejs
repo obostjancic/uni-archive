@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1 class="text-center">Manage pokemon types</h1>
+<div class="container">
+    <button type="button" class="btn" data-toggle="modal" data-target="#createPokemonTypeModal">Create</button>
+    <div id="createPokemonTypeModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Create new pokemon type</h4>
+                </div>
+                <form id="PokemonTypeCreateForm" action="/playerCreate" method="post">
+                    <div class="modal-body">
+                        <label for="pokeid">ID:</label>
+                        <input type="text" class="form-control" id="pokeid" name="pokeid">
+                        <label for="frstnm">Name:</label>
+                        <input type="text" class="form-control" id="pokename" name="pokename">
+                        <label for="pokerarity">Rarity:</label>
+                        <input type="text" class="form-control" id="pokerarity" name="pokerarity">
+                        <label for="pokecatchchance">Catch chance:</label>
+                        <input type="text" class="form-control" id="pokecatchchance" name="pokecatchchance">
+                        <label for="pokehp">HP:</label>
+                        <input type="text" class="form-control" id="pokehp" name="pokehp">
+                        <label for="pokeattack">Attack:</label>
+                        <input type="text" class="form-control" id="pokeattack" name="pokeattack">
+                        <label for="pokedefense">Defense:</label>
+                        <input type="text" class="form-control" id="pokedefense" name="pokedefense">
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" value="Create" class="btn btn-default" data-dismiss="modal" onclick="addPokemonType()"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="editPokemonTypeModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit Pokemon type</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="unm">ID:</label>
+                    <input type="text" class="form-control" id="pokeidEdit" value="acd" name="pokeidEdit">
+                    <label for="frstnm">Name:</label>
+                    <input type="text" class="form-control" id="pokenameEdit" name="pokenameEdit">
+                    <label for="pokerarityEdit">Rarity:</label>
+                    <input type="text" class="form-control" id="pokerarityEdit" name="pokerarityEdit">
+                    <label for="pokecatchchanceEdit">Catch chance:</label>
+                    <input type="text" class="form-control" id="pokecatchchanceEdit" name="pokecatchchanceEdit">
+                    <label for="pokehpEdit">HP:</label>
+                    <input type="text" class="form-control" id="pokehpEdit" name="pokehpEdit">
+                    <label for="pokeattackEdit">Attack:</label>
+                    <input type="text" class="form-control" id="pokeattackEdit" name="pokeattackEdit">
+                    <label for="pokedefenseEdit">Defense:</label>
+                    <input type="text" class="form-control" id="pokedefenseEdit" name="pokedefenseEdit">
+                </div>
+                <div class="modal-footer" id="editModalFooter">
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table" id="pokemonTypeTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Rarity</th>
+            <th>Catch chance</th>
+            <th>HP</th>
+            <th>Attack</th>
+            <th>Defense</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (var i = 0; i < result.length; i++){ %>
+        <tr id=<%= "tRow" + i %>>
+            <td><%= result[i].id %></td>
+            <td><%= result[i].name %></td>
+            <td><%= result[i].rarity %></td>
+            <td><%= result[i].catchchance %></td>
+            <td><%= result[i].hp %></td>
+            <td><%= result[i].attack %></td>
+            <td><%= result[i].defense %></td>
+            <td><button class="btn" type="button" onclick="openEditModal(<%= i %>)">Edit</button></td>
+            <td><button class="btn" type="button" onclick="deleteRow(<%= i %>)">Delete</button></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript" src="/javascripts/pokemonType.js"></script>
+</body>
+</html>

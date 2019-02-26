@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow: hidden;
+    -webkit-filter: grayscale(5%);
+    filter: grayscale(5%);
+}
+
+.hand {
+    cursor: pointer !important;
+}

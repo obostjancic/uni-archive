@@ -1,0 +1,18 @@
+.boardBackground {
+    height: 100vh !important;
+    background-image: url("https://static.klix.ba/media/images/fotodana/2225_full.jpg");
+    background-size: cover;
+}
+
+.boardMenu {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.board {
+    display: flex;
+    height: 88.5vh;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: auto;
+}

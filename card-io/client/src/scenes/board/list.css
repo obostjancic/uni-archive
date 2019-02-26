@@ -1,0 +1,30 @@
+.cardListOuter {
+}
+
+.cardListInner {
+    max-height: 70vh !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    padding: 1vh !important;
+    background-color:rgba(150, 150, 150, 0.6) !important;
+}
+
+.cardListHeader {
+    padding-top: 3% !important;
+    padding-bottom: 2% !important;
+    background-color:rgba(255, 255, 255, 0.9) !important;
+}
+
+.cardListFooter {
+    padding-top: 3% !important;
+    padding-bottom: 2% !important;
+    background-color:rgba(150, 150, 150, 0.8) !important;
+}
+
+.cardListColumn {
+    float: left;
+    padding: 10px !important;
+    min-width: 315px;
+    max-width: 315px;
+    min-height: 100%;
+}

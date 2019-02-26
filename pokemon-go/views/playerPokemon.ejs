@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1 class="text-center">Manage player pokemons</h1>
+<div class="container">
+    <br /><br />
+    <h3>Create new connection</h3>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="unmConnect">Username:</label>
+            <input type="text" class="form-control" id="unmConnect">
+        </div>
+        <div class="form-group">
+            <label for="pokelist">Pokemon:</label>
+            <select class="form-control" id="pokelist">
+                <% for (var i = 0; i < result.length; i++){ %>
+                    <option value=<%= result[i].name %>><%= result[i].name %></option>
+                <% } %>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="customNameConnect">Custom name:</label>
+            <input type="text" class="form-control" id="customNameConnect">
+        </div>
+        <button type="button" class="btn" onclick="makeConnection()">Connect</button>
+    </form>
+    <br /><br />
+    <h3>Show existing connections for selected player</h3>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="unmShow">Username:</label>
+            <input type="text" class="form-control" id="unmShow">
+        </div>
+        <button type="button" class="btn" onclick="showConnections()">Show</button>
+    </form>
+    <br />
+    <div class="container" id="connectionList">
+        <h1 class="text-center">Pokemons for player</h1>
+        <h1 class="text-center" id="playerHeading"></h1>
+        <table class="table" id="playerPokemonTable">
+            <thead>
+            <tr>
+                <th>Pokemontypeid</th>
+                <th>Name</th>
+                <th>Custom name</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody id="playerPokemonTableBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="/javascripts/playerPokemon.js"></script>
+</body>
+</html>

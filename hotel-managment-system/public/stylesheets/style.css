@@ -1,0 +1,165 @@
+body {
+  height: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: Lato;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: 1px solid rgb(90, 45, 12);
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+nav{
+  opacity: 0.9;
+  background-image: url('../images/nav-background.jpg');
+  background-size: cover;
+}
+
+.dugme-black {
+  opacity: 0.9;
+  border-radius: 0;
+  border: 3px solid;
+  border-color: rgba(0, 0, 0, 0.9);
+  background-color: transparent;
+  color: black;
+}
+
+.dugme {
+  opacity: 0.9;
+  border-radius: 0;
+  border: 3px solid;
+  border-color: rgba(255, 255, 255, 0.9);
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+.dugme:hover {
+  color: white;
+}
+
+.dugme:focus {
+  color: white;
+}
+
+#login-dugme:hover {
+  background-color: rgba(0, 158, 96, 0.9);
+}
+
+nav ul li a {
+  opacity: 0.9;
+  color: white !important;
+}
+
+nav ul li a:hover {
+  opacity: 0.75;
+  background-color: rgba(0, 158, 96, 0.9) !important;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+#logo-navbar {
+  height: 50px;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+body.modal-open .container-fluid{
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.modal {
+  color: white;
+  position: fixed;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 10040;
+  overflow: auto;
+  overflow-y: auto;
+}
+
+.vertical-alignment-helper {
+  display:table;
+  height: 100%;
+  width: 110%;
+  margin: 0;
+  pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events:none;
+}
+.modal-content {
+  width: 20%;
+  height:inherit;
+  margin: 0 auto;
+  pointer-events: all;
+  background: transparent;
+  border:none;
+  -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  -moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  -o-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  box-shadow: 0 5px 15px rgba(0,0,0,0);
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 77, 46, 1);
+}
+
+#log-out-link {
+  padding: 6px 10px;
+ /* margin: 7px 5px;*/
+}
+
+li.active a{
+  background-color: rgba(0, 158, 96, 0.8) !important;
+}
+
+#navigacija-desno li p{
+  color: white;
+  margin: 14px;
+  font-size: 15px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+nav{
+  opacity: 0.9;
+  background-image: url('../images/nav-background.jpg');
+  background-size: cover;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon Go</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><img id="logo" src="../pokemon-logo.png"></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a id="logout-link" href="/playermap/logout"><button class="btn" type="button" >Logout</button></a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="col-sm-9" id="map"></div>
+    <div class="col-sm-3" id="tabelaPokemoni">
+        <h3 class="text-center">Your pokemons</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Custom name</th>
+            </tr>
+            </thead>
+            <tbody id="playerPokemons">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="col-sm-6" id="tableChallenges">
+        <h3 class="text-center">Potential battles</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Challenger</th>
+                <th>Accept</th>
+                <th>Decline</th>
+            </tr>
+            </thead>
+            <tbody id="tableChallengesBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="catchPokemonModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center" id="catchPokemonModalHeading"></h4>
+            </div>
+            <div class="modal-body" id="catchPokemonModalBody">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="wrapper-img img-responsive text-center">
+                        </div>
+                    </div>
+                    <div class="col-sm-4" id="pokemonInfo">
+                    </div>
+                </div>
+                <div class="text-center " id="catchPokemonModalFooter">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="playerInfoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center" id="playerInfoModalHeading"></h4>
+            </div>
+            <div class="modal-body text-center" id="playerInfoModalBody">
+
+            </div>
+            <div class="text-center" id="playerInfoModalFooter">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="choosePokemonModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center" id="choosePokemonModalHeading">Choose your pokemon</h4>
+            </div>
+            <div class="modal-body text-center" id="choosePokemonModalBody">
+                <select class="form-control" id="choosePokemonList">
+                </select>
+            </div>
+            <div class="text-center" id="choosePokemonModalFooter">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fightModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center" id="fightModalHeading">Choose your pokemon</h4>
+            </div>
+            <div class="modal-body text-center" id="fightModalBody">
+
+                    <div class="col-sm-5 text-left">
+                        <h2 class="damageIndicator" id="leftDI">.</h2>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-5 text-right">
+                        <h2 class="damageIndicator" id="rightDI">.</h2>
+                    </div>
+
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="wrapper-img img-responsive text-center" id="leftPic" >
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="wrapper-img img-responsive text-center" id="rightPic" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5" id="leftHP">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-5" id="rightHP">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+</script>
+<script type="text/javascript" src="/javascripts/playerMap.js"></script>
+<script type="text/javascript" src="/javascripts/challenge.js"></script>
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1R0ATAfJEOAuDNjRutbRDBdQK8W6CkfQ">
+</script>
+</body>
+</html>

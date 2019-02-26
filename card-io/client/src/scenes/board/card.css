@@ -1,0 +1,23 @@
+.iconLabel {
+    padding: 2% !important;
+    margin-left: 1%;
+}
+
+.memberLabel {
+    float: right;
+}
+
+.cardSegment {
+    white-space: normal;
+    padding: 2% !important;
+    margin-bottom: 1vh !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.cardSegment:hover {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.cardLabel {
+    padding: 2% !important;
+}
